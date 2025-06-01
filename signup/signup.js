@@ -1,4 +1,4 @@
-import { auth, db } from 'firebase-init.js';
+import { auth, db } from '../firebase-init.js';
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 import { doc, setDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 createdAt: new Date()
             });
 
-            window.location.href = `dashboard.html`;
+            window.location.href = `../dashboard/dashboard.html`;
         } catch (error) {
             console.error('Error signing up:', error.code, error.message);
             alert(`Sign-up failed: ${error.message}`);
