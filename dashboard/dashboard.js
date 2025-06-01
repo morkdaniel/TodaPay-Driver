@@ -1,4 +1,4 @@
-import { auth, db, storage } from '../../firebase/firebase-init.js';
+import { auth, db, storage } from '../firebase-init.js';
 import { onAuthStateChanged, signOut } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js';
 import {
   collection,
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 🔐 Auth check
   onAuthStateChanged(auth, async (user) => {
     if (!user) {
-      window.location.href = '/driver/login/login.html';
+      window.location.href = '../login.html';
     } else {
       currentUser = user;
       try {
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 🚪 Logout
   logoutBtn.addEventListener('click', () => {
     signOut(auth)
-      .then(() => window.location.href = '/driver/login/login.html')
+      .then(() => window.location.href = '../login.html')
       .catch((error) => {
         console.error('Sign out error:', error.message);
         alert('Error signing out.');
