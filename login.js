@@ -1,4 +1,4 @@
-import { auth } from 'firebase/firebase-init.js';
+import { auth } from 'firebase-init.js';
 import { signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js';
 
 document.addEventListener('DOMContentLoaded', () => {
