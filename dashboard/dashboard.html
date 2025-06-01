@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Driver Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <button id="logout-btn">Logout</button>
+  <div class="dashboard-container">
+      <h1 id="title">Driver Dashboard</h1>
+
+
+  <div class="profile">
+  <img
+    src="https://64.media.tumblr.com/08e222f303b07ce59937b0447b03f8cd/tumblr_pc14sps5Qf1rxkqbso1_1280.png"  
+    alt="Driver Photo"
+    class="driver-photo"
+    id="profile-trigger"
+   />
+
+  <div class="trike-info">
+    <h2 class="driver-name">Juan Dela Cruz</h2>
+    <p><strong>Tricycle No:</strong> T123</p>
+    <p><strong>Model:</strong> Bajaj RE</p>
+    <p><strong>Plate No:</strong> XYZ-1234</p>
+  </div>
+  </div>
+
+  <!-- Profile Modal -->
+<div class="profile-modal hidden" id="profile-modal">
+  <div class="modal-content">
+    <img src="https://64.media.tumblr.com/08e222f303b07ce59937b0447b03f8cd/tumblr_pc14sps5Qf1rxkqbso1_1280.png" alt="Current Profile" id="modal-profile-preview" />
+    <div class="modal-actions">
+      <label for="upload-input" class="upload-btn">Change Profile Picture</label>
+      <input type="file" id="upload-input" accept="image/*" hidden />
+      <button id="view-fullsize-btn">View Full Size</button>
+    </div>
+  </div>
+</div>
+
+    <div class="scan-section">
+  <input type="text" id="kiosk-id-input" placeholder="Enter Kiosk ID" />
+  <button id="scan-btn">Submit</button>
+  <button id="camera-scan-btn">📷</button>
+</div>
+
+    <div class="log-section">
+  <div class="log-header">
+    <span>No</span>
+    <span>Destination</span>
+    <span>Time</span>
+    <span>Money</span>
+  </div>
+  
+  <!-- Wrap log entries inside this container -->
+  <div id="travel-logs"></div>
+</div>
+
+      <!-- Camera scanner modal -->
+<div id="scanner-modal" class="hidden">
+  <div id="scanner-box">
+    <div id="qr-reader"></div>
+    <button id="close-scanner">Close</button>
+  </div>
+</div>
+
+  <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+  <script type="module" src="dashboard.js"></script>
+  
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Driver Sign Up – TODAPay</title>
+  <link rel="stylesheet" href="signup.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="signup-container">
+    <h2>Create Driver Account</h2>
+    <form id="signup-form">
+  <div class="form-row">
+    <div class="form-group">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Juan Dela Cruz" required />
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="driver@example.com" required />
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="••••••••" required />
+    </div>
+    <div class="form-group">
+      <label for="mobile">Mobile Number</label>
+      <input type="tel" id="mobile" placeholder="0917 123 4567" required />
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="toda">TODA Name</label>
+      <input type="text" id="toda" placeholder="Sta. Lucia TODA" required />
+    </div>
+    <div class="form-group">
+      <label for="toda-no">TODA Number</label>
+      <input type="text" id="toda-no" placeholder="e.g., 014-B" required />
+    </div>
+  </div>
+
+  <div class="form-row">
+  <div class="form-group">
+    <label for="body-no">Tricycle Body Number</label>
+    <input type="text" id="body-no" placeholder="e.g., SL-23" required />
+  </div>
+</div>
+
+  <button type="submit">Sign Up</button>
+</form>
+
+    <p class="login-link">Already have an account? <a href="../login/login.html">Log in here</a></p>
+  </div>
+
+  <script type="module" src="signup.js"></script>
+  <script type="module" src="../../firebase/firebase-init.js"></script>
+</body>
+</html>
