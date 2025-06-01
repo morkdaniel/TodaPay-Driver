@@ -1,4 +1,4 @@
-import { auth } from '../../firebase/firebase-init.js';
+import { auth } from 'firebase/firebase-init.js';
 import { signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log('Logged in as:', userCredential.user.email);
-        window.location.href = '../../driver/dashboard/dashboard.html';
+        window.location.href = 'dashboard/dashboard.html';
       })
       .catch((error) => {
         console.error('Login error:', error.message);
